@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright (c) Microsoft Corporation. All rights reserved.
+-->
+<engagement>
+  <agent>
+    <!-- Your application connection string. -->
+    <connectionString></connectionString>
+
+    <!-- [Optional] Indicate whether the agent have to report crash or not. -->
+    <reportCrash>true</reportCrash>
+  </agent>
+  <reach>
+    <!-- [Optional] Indicate whether the native push (MPNS) is activated or not. -->
+    <enableNativePush>true</enableNativePush>
+
+    <!-- [Optional] Name of the push channel. Provide the same name that your application may currently use. -->
+    <channelName></channelName>
+  </reach>
+</engagement>
