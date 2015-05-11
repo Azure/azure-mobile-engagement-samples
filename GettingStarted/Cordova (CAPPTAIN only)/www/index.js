@@ -71,6 +71,11 @@ app.controller('appController', function($scope) {
 		Capptain.registerForPushNotification(undefined,$scope.onError);
 	};
 
+	$scope.runTests = function() {
+		window.location = "cdvtests/index.html";
+	};
+
+
 	// DEBUG 
 	if (typeof cordova=="undefined")
 		$scope.ready=true;

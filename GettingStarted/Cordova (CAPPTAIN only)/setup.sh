@@ -36,6 +36,8 @@ cordova plugin add capptain-cordova 	--variable CAPPTAIN_IOS_APP_ID=$CAPPTAIN_IO
 								--variable CAPPTAIN_ANDROID_REACH_ICON=$CAPPTAIN_ANDROID_REACH_ICON \
 								--variable CAPPTAIN_REDIRECT_URL=$CAPPTAIN_REDIRECT_URL \
 								--variable CAPPTAIN_ENABLE_LOG=$CAPPTAIN_ENABLE_LOG
+cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
+cordova plugin add capptain-cordova#:tests
 
 rm -rf www
 cp -r  $CURDIR/www .
