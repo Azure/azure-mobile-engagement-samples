@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAzMEWorkflow", "CreateAzMEWorkflow\CreateAzMEWorkflow.csproj", "{7A98173C-0E02-46E5-AC7B-36611273AA0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsAuth", "ClaimsAuth\ClaimsAuth.csproj", "{2F63BAE9-2A4A-4027-9937-C1A63731B17D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A98173C-0E02-46E5-AC7B-36611273AA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A98173C-0E02-46E5-AC7B-36611273AA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A98173C-0E02-46E5-AC7B-36611273AA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A98173C-0E02-46E5-AC7B-36611273AA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F63BAE9-2A4A-4027-9937-C1A63731B17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F63BAE9-2A4A-4027-9937-C1A63731B17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F63BAE9-2A4A-4027-9937-C1A63731B17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F63BAE9-2A4A-4027-9937-C1A63731B17D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
