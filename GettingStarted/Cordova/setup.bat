@@ -24,7 +24,7 @@ cd %APP_NAME%
 
 call cordova platform add android
 call cordova plugin add cordova-plugin-console
-call cordova plugin add cordova-plugin-ms-azme  --variable AZME_ANDROID_APPID=%AZME_ANDROID_APPID% ^
+call cordova plugin add cordova-plugin-ms-azure-mobile-engagement  --variable AZME_ANDROID_APPID=%AZME_ANDROID_APPID% ^
 									--variable AZME_ANDROID_GOOGLE_PROJECT_NUMBER=%AZME_ANDROID_GOOGLE_PROJECT_NUMBER% ^
 									--variable AZME_ANDROID_SDKKEY=%AZME_ANDROID_SDKKEY% ^
 									--variable AZME_ANDROID_COLLECTION=%AZME_ANDROID_COLLECTION% ^
@@ -32,7 +32,7 @@ call cordova plugin add cordova-plugin-ms-azme  --variable AZME_ANDROID_APPID=%A
 									--variable AZME_REDIRECT_URL=%AZME_REDIRECT_URL% ^
 									--variable AZME_ENABLE_LOG=%AZME_ENABLE_LOG%
 call cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
-call cordova plugin add cordova-plugin-ms-azme#:tests								
+call cordova plugin add cordova-plugin-ms-azure-mobile-engagement#:tests								
 
 rmdir /S /Q www
 mkdir www

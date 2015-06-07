@@ -32,7 +32,7 @@ cd $APP_NAME
 cordova platform add ios
 cordova platform add android
 cordova plugin add cordova-plugin-console
-cordova plugin add cordova-plugin-ms-azme	--variable AZME_IOS_COLLECTION=$AZME_IOS_COLLECTION \
+cordova plugin add cordova-plugin-ms-azure-mobile-engagement	--variable AZME_IOS_COLLECTION=$AZME_IOS_COLLECTION \
 								--variable AZME_IOS_SDKKEY=$AZME_IOS_SDKKEY \
 								--variable AZME_IOS_APPID=$AZME_IOS_APPID \
 								--variable AZME_IOS_REACH_ICON=$AZME_IOS_REACH_ICON \
@@ -44,7 +44,7 @@ cordova plugin add cordova-plugin-ms-azme	--variable AZME_IOS_COLLECTION=$AZME_I
 								--variable AZME_REDIRECT_URL=$AZME_REDIRECT_URL \
 								--variable AZME_ENABLE_LOG=$AZME_ENABLE_LOG
 cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
-cordova plugin add cordova-plugin-ms-azme#:tests
+cordova plugin add cordova-plugin-ms-azure-mobile-engagement#:tests
 
 rm -rf www
 cp -r  $CURDIR/www .
