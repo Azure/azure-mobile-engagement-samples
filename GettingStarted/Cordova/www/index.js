@@ -3,7 +3,7 @@
  * Licensed under the MIT license. See License.txt in the project root for license information.
  */
 
-var app = angular.module('capptainApp', []);
+var app = angular.module('sampleApp', []);
 
 app.controller('appController', function($scope) {
 
@@ -16,16 +16,16 @@ app.controller('appController', function($scope) {
 		$scope.ready = true;
 		$scope.cordova = cordova;
 		$scope.startActivity("home",{newbie:true});
-		Capptain.getStatus(function(_status) {
+		AZME.getStatus(function(_status) {
 			$scope.status = _status;
 			$scope.$apply();
 		});
 		$scope.$apply();
-		Capptain.onOpenURL(function(_url) {
+		AZME.onOpenURL(function(_url) {
 			$scope.alert = "Got push URL "+_url;
 			$scope.$apply();
 			console.log(alert);
-			$('#capptain-alert').modal();
+			$('#sample-alert').modal();
 		});
 	};
 	
@@ -37,44 +37,43 @@ app.controller('appController', function($scope) {
 	$scope.startActivity = function(_activityname,_param) {
 		console.log('startActivity:'+_activityname);
 		$scope.currentActivity = _activityname;
-		Capptain.startActivity(_activityname,_param,undefined,$scope.onError );
+		AZME.startActivity(_activityname,_param,undefined,$scope.onError );
 	};
 
 	$scope.endActivity = function() {
 		console.log('endActivity:'+$scope.currentActivity);
 		$scope.currentActivity = null;
-		Capptain.endActivity(undefined,$scope.onError );
+		AZME.endActivity(undefined,$scope.onError );
 	};
 
 	$scope.sendAppInfo = function(_appInfos) {
 		console.log('sendAppInfo:'+JSON.stringify(_appInfos));
-		Capptain.sendAppInfo(_appInfos,undefined,$scope.onError);
+		AZME.sendAppInfo(_appInfos,undefined,$scope.onError);
 	};
 
 	$scope.sendEvent = function(_eventName,_extraInfos) {
 		console.log('sendEvent:'+_eventName);
-		Capptain.sendEvent(_eventName,_extraInfos,undefined,$scope.onError);
+		AZME.sendEvent(_eventName,_extraInfos,undefined,$scope.onError);
 	};
 
 	$scope.startJob = function(_jobName,_extraInfos) {
 		console.log('startJob:'+_jobName);
-		Capptain.startJob(_jobName,_extraInfos,undefined,$scope.onError);
+		AZME.startJob(_jobName,_extraInfos,undefined,$scope.onError);
 	};
 
 	$scope.endJob = function(_jobName) {
 		console.log('endJob:'+_jobName);
-		Capptain.endJob(_jobName,undefined,$scope.onError);
+		AZME.endJob(_jobName,undefined,$scope.onError);
 	};
 
 	$scope.registerForPushNotification = function() {
 		console.log('registerForPushNotification');;
-		Capptain.registerForPushNotification(undefined,$scope.onError);
+		AZME.registerForPushNotification(undefined,$scope.onError);
 	};
 
 	$scope.runTests = function() {
 		window.location = "cdvtests/index.html";
 	};
-
 
 	// DEBUG 
 	if (typeof cordova=="undefined")

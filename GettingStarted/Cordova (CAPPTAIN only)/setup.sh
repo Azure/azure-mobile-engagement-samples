@@ -8,14 +8,14 @@ export CAPPTAIN_REDIRECT_URL=mytest
 export CAPPTAIN_ENABLE_LOG=true
 
 # IOS
-export CAPPTAIN_IOS_APP_ID=tes000240
-export CAPPTAIN_IOS_SDK_KEY=f8b9d437265048c1b117a86bd7e002dc
+export CAPPTAIN_IOS_APP_ID=<CAPPTAIN_IOS_APP_ID>
+export CAPPTAIN_IOS_SDK_KEY=<CAPPTAIN_IOS_SDK_KEY>
 export CAPPTAIN_IOS_REACH_ICON=icon.png
 
 #ANDROID
 export CAPPTAIN_ANDROID_REACH_ICON=icon
-export CAPPTAIN_ANDROID_APP_ID=tes000243
-export CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER=773547123772
+export CAPPTAIN_ANDROID_APP_ID=<CAPPTAIN_ANDROID_APP_ID>
+export CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER=<CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER>
 
 export DST_PATH=~
 export CURDIR=$PWD
@@ -36,6 +36,8 @@ cordova plugin add capptain-cordova 	--variable CAPPTAIN_IOS_APP_ID=$CAPPTAIN_IO
 								--variable CAPPTAIN_ANDROID_REACH_ICON=$CAPPTAIN_ANDROID_REACH_ICON \
 								--variable CAPPTAIN_REDIRECT_URL=$CAPPTAIN_REDIRECT_URL \
 								--variable CAPPTAIN_ENABLE_LOG=$CAPPTAIN_ENABLE_LOG
+cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
+cordova plugin add capptain-cordova#:tests
 
 rm -rf www
 cp -r  $CURDIR/www .

@@ -2,12 +2,14 @@
 rem replace with your own IDs
 
 set APP_NAME=CapptainCordova
-set PACKAGE_NAME=com.del7a.capptaincordova
-set CAPPTAIN_ANDROID_REACH_ICON_ANDROID=icon
-set CAPPTAIN_ANDROID_APP_ID=tes000243
-set CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER=773547123772
 set CAPPTAIN_ENABLE_LOG=true
 set CAPPTAIN_REDIRECT_URL=mytest
+set CAPPTAIN_ANDROID_REACH_ICON=icon
+
+set PACKAGE_NAME=<PACKAGE_NAME>
+set CAPPTAIN_ANDROID_APP_ID=<CAPPTAIN_ANDROID_APP_ID>
+set CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER=<CAPPTAIN_ANDROID_GOOGLE_PROJECT_NUMBER>
+
 
 set DST_PATH=%USERPROFILE%
 set CURDIR=%CD%
@@ -24,6 +26,8 @@ call cordova plugin add capptain-cordova  --variable CAPPTAIN_ANDROID_APP_ID=$CA
 									--variable CAPPTAIN_ANDROID_REACH_ICON=$CAPPTAIN_ANDROID_REACH_ICON ^
 									--variable CAPPTAIN_REDIRECT_URL=$CAPPTAIN_REDIRECT_URL ^
 									--variable CAPPTAIN_ENABLE_LOG=$CAPPTAIN_ENABLE_LOG
+call cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
+call cordova plugin add capptain-cordova#:tests
 									
 rmdir /S /Q www
 mkdir www
