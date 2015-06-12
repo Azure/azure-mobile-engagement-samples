@@ -16,12 +16,12 @@ app.controller('appController', function($scope) {
 		$scope.ready = true;
 		$scope.cordova = cordova;
 		$scope.startActivity("home",{newbie:true});
-		AZME.getStatus(function(_status) {
+		AzureEngagement.getStatus(function(_status) {
 			$scope.status = _status;
 			$scope.$apply();
 		});
 		$scope.$apply();
-		AZME.onOpenURL(function(_url) {
+		AzureEngagement.onOpenURL(function(_url) {
 			$scope.alert = "Got push URL "+_url;
 			$scope.$apply();
 			console.log(alert);
@@ -37,38 +37,38 @@ app.controller('appController', function($scope) {
 	$scope.startActivity = function(_activityname,_param) {
 		console.log('startActivity:'+_activityname);
 		$scope.currentActivity = _activityname;
-		AZME.startActivity(_activityname,_param,undefined,$scope.onError );
+		AzureEngagement.startActivity(_activityname,_param,undefined,$scope.onError );
 	};
 
 	$scope.endActivity = function() {
 		console.log('endActivity:'+$scope.currentActivity);
 		$scope.currentActivity = null;
-		AZME.endActivity(undefined,$scope.onError );
+		AzureEngagement.endActivity(undefined,$scope.onError );
 	};
 
 	$scope.sendAppInfo = function(_appInfos) {
 		console.log('sendAppInfo:'+JSON.stringify(_appInfos));
-		AZME.sendAppInfo(_appInfos,undefined,$scope.onError);
+		AzureEngagement.sendAppInfo(_appInfos,undefined,$scope.onError);
 	};
 
 	$scope.sendEvent = function(_eventName,_extraInfos) {
 		console.log('sendEvent:'+_eventName);
-		AZME.sendEvent(_eventName,_extraInfos,undefined,$scope.onError);
+		AzureEngagement.sendEvent(_eventName,_extraInfos,undefined,$scope.onError);
 	};
 
 	$scope.startJob = function(_jobName,_extraInfos) {
 		console.log('startJob:'+_jobName);
-		AZME.startJob(_jobName,_extraInfos,undefined,$scope.onError);
+		AzureEngagement.startJob(_jobName,_extraInfos,undefined,$scope.onError);
 	};
 
 	$scope.endJob = function(_jobName) {
 		console.log('endJob:'+_jobName);
-		AZME.endJob(_jobName,undefined,$scope.onError);
+		AzureEngagement.endJob(_jobName,undefined,$scope.onError);
 	};
 
 	$scope.registerForPushNotification = function() {
 		console.log('registerForPushNotification');;
-		AZME.registerForPushNotification(undefined,$scope.onError);
+		AzureEngagement.registerForPushNotification(undefined,$scope.onError);
 	};
 
 	$scope.runTests = function() {
