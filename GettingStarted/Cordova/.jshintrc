@@ -1,0 +1,23 @@
+{
+    "node": true
+  , "bitwise": true
+  , "undef": true
+  , "trailing": true
+  , "quotmark": true
+  , "indent": 4
+  , "unused": "vars"
+  , "latedef": "nofunc"
+  , "globals"   : {
+        /* CORDOVA */
+        "cordova" : false,
+        /* AZME */
+        "AzureEngagement" : false,
+         /* ANGULAR */
+        "angular" : false,
+        /* JQUERY */
+        "$" : false,
+        "window" : false,
+        "document" : false
+             
+  }
+}
