@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-ms-azure-mobile-engagement-sample",
+  "version": "1.0.0",
+  "description": "Sample for Cordova plugin for Azure Mobile Engagement",
+ 
+  "repository": {
+  },
+   "devDependencies": {
+    "jshint": "2.5.8",
+    "jscs" : "1.13.1"
+  },
+  "scripts": {
+    "test": "npm run jshint && npm run jscs",
+    "jshint": "node node_modules/jshint/bin/jshint www",
+    "jscs": "node node_modules/jscs/bin/jscs www"
+  },
+ 
+  "author": "Olivier Goguel",
+  "license": "MIT"
+}
