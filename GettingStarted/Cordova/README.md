@@ -9,14 +9,11 @@ To easily play around with the plugin, a sample application (w/ unit testing) is
 - Edit setup.sh with your own credentials
 ```sh
 
-export AZME_ANDROID_APPID=<AZME_ANDROID_APPID>
-export AZME_ANDROID_COLLECTION=<ANDROID_IOS_COLLECTION>
-export AZME_ANDROID_SDKKEY=<ANDROID_IOS_SDKKEY>
-export AZME_ANDROID_GOOGLE_PROJECT_NUMBER=<AZME_ANDROID_GOOGLE_PROJECT_NUMBER>
 
-export AZME_IOS_APPID=<AZME_IOS_APPID>
-export AZME_IOS_COLLECTION=<AZME_IOS_COLLECTION>
-export AZME_IOS_SDKKEY=<AZME_IOS_SDKKEY>
+export AZME_ANDROID_CONNECTION_STRING=<ANDROID_CONNECTION_STRING>
+export AZME_ANDROID_GOOGLE_PROJECT_NUMBER=<ANDROID_GOOGLE_PROJECT_NUMBER>
+
+export AZME_IOS_CONNECTION_STRING=<IOS_CONNECTION_STRING>
 
 ```
 - Create the sample project by launching setup.sh 
@@ -29,9 +26,10 @@ cd ~/AZMECordova
 ```
 - Launch one of the following command
 ```sh
-cordova run android
+cordova emulate android
 cordova emulate ios
-cordova run ios device
+cordova run android --device
+cordova run ios --device
 ```
 
 #### Windows
