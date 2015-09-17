@@ -27,6 +27,15 @@ app.controller('appController', function($scope) {
             console.log($scope.alert);
             $('#sample-alert').modal();
         });
+
+        AzureEngagement.onDataPushReceived(function(_category,_body) {
+            $scope.alert = 'Got push DATA: '+_category+', '+_body;
+            $scope.$apply();
+            console.log($scope.alert);
+            $('#sample-alert').modal();
+        });
+
+
     };
 
     $scope.onError = function(_error) {
