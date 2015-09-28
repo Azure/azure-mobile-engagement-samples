@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.del7a.azmecordova" 
-        version="2.0.0" 
+<widget id="com.del7a.azmecordova" version="2.1.0" 
         xmlns="http://www.w3.org/ns/widgets" 
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>AZMECordova</name>
@@ -9,9 +8,10 @@
     </description>
   
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" version="2.0.0" />
+    <plugin name="cordova-plugin-whitelist"  version="1"  />
     <access origin="*" />
-    
+    <icon platform="ios" src="azure-icon.png" />
+    <icon platform="android" src="azure-icon.png" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

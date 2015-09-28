@@ -3,7 +3,7 @@
  * Licensed under the MIT license. See License.txt in the project root for license information.
  */
 
-var app = angular.module('sampleApp', []);
+var app = angular.module('sampleApp', ['ngSanitize']);
 
 app.controller('appController', function($scope) {
 
@@ -24,9 +24,23 @@ app.controller('appController', function($scope) {
         AzureEngagement.onOpenURL(function(_url) {
             $scope.alert = 'Got push URL '+_url;
             $scope.$apply();
-            console.log($scope.alert);
             $('#sample-alert').modal();
         });
+
+        AzureEngagement.onDataPushReceived(function(_category,_body) {
+            var str = "<p>Got DataPush: <b>"+_category+"</b></p>";
+            if (_category=="png")
+                str += '<img src="data:image/png;base64,'+_body+'" width="128" height="128" />';
+            else
+            {
+                str += _body.replace(/\n/, '<br />');
+            }
+            $scope.alert = str;
+            $scope.$apply();
+            $('#sample-alert').modal();
+        });
+
+
     };
 
     $scope.onError = function(_error) {
@@ -79,5 +93,7 @@ app.controller('appController', function($scope) {
         $scope.ready=true;
     else
         document.addEventListener('deviceready', $scope.onReady, false);
+
+
 
 });
