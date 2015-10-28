@@ -88,6 +88,17 @@ app.controller('appController', function($scope) {
         window.location = 'cdvtests/index.html';
     };
 
+    $scope.requestPermissions = function() {
+        AzureEngagement.requestPermissions(['ACCESS_FINE_LOCATION','WRITE_EXTERNAL_STORAGE'],function(_ret) {
+                console.log("requestPermisisons = "+JSON.stringify(_ret));
+            },$scope.onError);
+    }; 
+
+    $scope.refreshPermissions = function() {
+        console.log('refreshPermissions');
+        AzureEngagement.refreshPermissions(undefined,$scope.onError);
+    };
+
     // DEBUG
     if (typeof cordova=='undefined')
         $scope.ready=true;
