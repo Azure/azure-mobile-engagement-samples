@@ -19,6 +19,7 @@ cd %APP_NAME%
 
 call cordova platform add android
 call cordova plugin add cordova-plugin-console
+call cordova plugin add $%CURDIR%#:resources
 call cordova plugin add cordova-plugin-ms-azure-mobile-engagement  ^
                                     --variable AZME_ANDROID_CONNECTION_STRING=%AZME_ANDROID_CONNECTION_STRING% ^
 									--variable AZME_ANDROID_GOOGLE_PROJECT_NUMBER=%AZME_ANDROID_GOOGLE_PROJECT_NUMBER% ^
@@ -28,7 +29,11 @@ call cordova plugin add cordova-plugin-ms-azure-mobile-engagement#:tests
 
 rmdir /S /Q www
 mkdir www
-copy   %CURDIR%\www\*.* www
+copy  %CURDIR%\www\*.* www
+copy   %CURDIR%\azure-icon.png .
+
+rm config.xml
+copy %CURDIR%\config.xml .
 
 cd /D %CURDIR%
 echo ***
