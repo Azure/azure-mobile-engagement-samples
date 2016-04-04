@@ -26,7 +26,7 @@ cd $APP_NAME
 cordova platform add ios
 cordova platform add android
 cordova plugin add cordova-plugin-console
-cordova plugin add $CURDIR/../sample#:resources
+cordova plugin add $CURDIR/../sample/resources
 
 cordova plugin add cordova-plugin-ms-azure-mobile-engagement    --variable AZME_IOS_CONNECTION_STRING=$AZME_IOS_CONNECTION_STRING \
                                         --variable AZME_ANDROID_GOOGLE_PROJECT_NUMBER=$AZME_ANDROID_GOOGLE_PROJECT_NUMBER \
@@ -37,7 +37,7 @@ cordova plugin add cordova-plugin-ms-azure-mobile-engagement    --variable AZME_
 
 
 cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
-cordova plugin add $CURDIR/../plugin#:tests
+cordova plugin add $CURDIR/../plugin/tests
 
 rm -rf www
 cp -r  $CURDIR/www .
