@@ -34,8 +34,8 @@ namespace MSDN.Samples.ClaimsAuth
             // set login page url and success url from target site
             this.GetClaimParams(this.fldTargetSiteUrl, out this.fldLoginPageUrl, out  this.fldNavigationEndUrl);
 
-            this.PopUpHeight = PopUpHeight;
-            this.PopUpWidth = PopUpWidth;
+            this.PopUpHeight = popUpHeight;
+            this.PopUpWidth = popUpWidth;
 
             this.webBrowser = new WebBrowser();
             this.webBrowser.Navigated += new WebBrowserNavigatedEventHandler(ClaimsWebBrowser_Navigated);
